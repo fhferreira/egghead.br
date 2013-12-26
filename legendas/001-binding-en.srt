@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+JOHN LINDQUIST: Let's talk about binding an AngularJS.
+
+3
+00:00:03,000 --> 00:00:07,000
+We'll just set up a div with a NG app attribute.
+
+4
+00:00:07,000 --> 00:00:11,000
+Basically, this attribute says that this element and anything
+
+5
+00:00:11,000 --> 00:00:15,000
+inside of it belongs to this app.
+
+6
+00:00:15,000 --> 00:00:16,000
+We'll go into that more later.
+
+7
+00:00:16,000 --> 00:00:20,000
+But for now, binding looks something like this.
+
+8
+00:00:20,000 --> 00:00:23,000
+So we'll have a data message inside of those tags.
+
+9
+00:00:23,000 --> 00:00:26,000
+We don't have anything to bind to it yet.
+
+10
+00:00:26,000 --> 00:00:29,000
+But I just want to show that you can really evaluate any
+
+11
+00:00:29,000 --> 00:00:31,000
+sort of expression in here.
+
+12
+00:00:31,000 --> 00:00:34,000
+Let's make this a bit bigger.
+
+13
+00:00:34,000 --> 00:00:38,000
+So 2 plus 2, if I hit refresh, that'll evaluate to 4.
+
+14
+00:00:38,000 --> 00:00:42,000
+3 plus 2, hit refresh, that'll evaluate to 5.
+
+15
+00:00:42,000 --> 00:00:52,000
+And you can do things like John plus Lindquist, evaluate.
+
+16
+00:00:52,000 --> 00:00:54,000
+And again, any sort of--
+
+17
+00:00:54,000 --> 00:00:56,000
+not any sort of expression, but many expressions can be
+
+18
+00:00:56,000 --> 00:00:59,000
+evaluated in here.
+
+19
+00:00:59,000 --> 00:01:01,000
+Now there's a lot of things that you shouldn't do in here.
+
+20
+00:01:01,000 --> 00:01:05,000
+You should really keep this logic to a minimum, because
+
+21
+00:01:05,000 --> 00:01:08,000
+this is your view in presentation.
+
+22
+00:01:08,000 --> 00:01:12,000
+But there's really quite a lot of things you can do in there.
+
+23
+00:01:12,000 --> 00:01:14,000
+Basically, where this gets really useful is when you
+
+24
+00:01:14,000 --> 00:01:18,000
+create an input or any way for the user to interact with the
+
+25
+00:01:18,000 --> 00:01:20,000
+site or your app.
+
+26
+00:01:20,000 --> 00:01:23,000
+And you give it a model, say, data message.
+
+27
+00:01:23,000 --> 00:01:27,000
+And then here we'll say, data message.
+
+28
+00:01:27,000 --> 00:01:30,000
+So when I refresh in here, because I have a model bound
+
+29
+00:01:30,000 --> 00:01:35,000
+to that, I can just start typing and it magically
+
+30
+00:01:35,000 --> 00:01:40,000
+updates at every key press.
+
+31
+00:01:40,000 --> 00:01:45,000
+So that's how your data is being bound to and being
+
+32
+00:01:45,000 --> 00:01:48,000
+presented to however that model changes.
+
+33
+00:01:48,000 --> 00:01:52,000
+Now this can also do things like--
+
+34
+00:01:52,000 --> 00:01:57,000
+so if we just do plus world, for a proper hello world.
+
+35
+00:01:57,000 --> 00:02:01,000
+We can type hello, and it'll show hello world.
+
+36
+00:02:01,000 --> 00:02:03,000
+Now where this can get a bit crazy and
+
+37
+00:02:03,000 --> 00:02:05,000
+cool, you can actually--
+
+38
+00:02:05,000 --> 00:02:11,000
+if I say div and give this a class of that data message,
+
+39
+00:02:11,000 --> 00:02:12,000
+which is kind of a weird name for it, but we'll just leave
+
+40
+00:02:12,000 --> 00:02:19,000
+it for now, and say, wrap me with a foundation component.
+
+41
+00:02:19,000 --> 00:02:21,000
+So these foundation components are inside
+
+42
+00:02:21,000 --> 00:02:24,000
+the foundation library.
+
+43
+00:02:24,000 --> 00:02:31,000
+So a panel, an alert box, a label.
+
+44
+00:02:31,000 --> 00:02:35,000
+You can see that this is updating what's actually
+
+45
+00:02:35,000 --> 00:02:39,000
+inside of this attribute, that value in there.
+
+46
+00:02:39,000 --> 00:02:41,000
+So you can really manipulate a lot of the dom
+
+47
+00:02:41,000 --> 00:02:43,000
+using the data binding.
+
+48
+00:02:43,000 --> 00:02:45,000
+It's not just presenting simple text or anything, but
+
+49
+00:02:45,000 --> 00:02:48,000
+there's a lot more complex things you can do.
+
+50
+00:02:48,000 --> 00:02:51,000
+So that's data binding in a nutshell, and we'll
+

@@ -1,0 +1,208 @@
+1
+00:00:00,000 --> 00:00:03,000
+Vamos um passo a trás e falar sobre o ponto
+
+2
+00:00:03,000 --> 00:00:06,000
+aqui, e falar sobre porque isto é tão importante.
+
+3
+00:00:06,000 --> 00:00:10,000
+Vamos adicionar outro input, e vamos colocar isto
+
+4
+00:00:10,000 --> 00:00:14,000
+aqui, isso é mais no escopo raiz com um ng-model de
+
+5
+00:00:14,000 --> 00:00:16,000
+data.message
+
+6
+00:00:16,000 --> 00:00:21,000
+então, mostra a mensagem, então data.message
+
+7
+00:00:21,000 --> 00:00:27,000
+Vamos copiar isto e colar no primeiro controlador
+
+8
+00:00:27,000 --> 00:00:32,000
+e duplicar e criar um segundo controlador.
+
+9
+00:00:32,000 --> 00:00:35,000
+
+
+10
+00:00:35,000 --> 00:00:40,000
+Nós vamos precisar de um-- vamos deletar isso, e
+
+11
+00:00:40,000 --> 00:00:41,000
+criar um segundo controlador aqui.
+
+12
+00:00:41,000 --> 00:00:44,000
+
+
+13
+00:00:44,000 --> 00:00:52,000
+Está tudo pronto para ter raiz, primeiro e segundo
+
+14
+00:00:52,000 --> 00:00:56,000
+Você pode ver que através destes isso continua atualizando
+
+15
+00:00:56,000 --> 00:00:59,000
+enquanto eu mudo entre os diferentes inputs.
+
+16
+00:00:59,000 --> 00:01:03,000
+Agora, se você não incluir o ponto aqui, se você não
+
+17
+00:01:03,000 --> 00:01:07,000
+criar um objeto dado e colocar message como propriedade deste
+
+18
+00:01:07,000 --> 00:01:10,000
+objeto, vejamos o que acontece.
+
+19
+00:01:10,000 --> 00:01:12,000
+Vamos então trocar todos data.message com
+
+20
+00:01:12,000 --> 00:01:14,000
+apenas message.
+
+21
+00:01:14,000 --> 00:01:16,000
+e você vai ver vários exemplos como este
+
+22
+00:01:16,000 --> 00:01:23,000
+Agora, se atualizarmos, você verá o raiz, primeiro e segundo.
+
+23
+00:01:23,000 --> 00:01:26,000
+Você pode ver que este comportamento
+
+24
+00:01:26,000 --> 00:01:28,000
+mudou completamente.
+
+25
+00:01:28,000 --> 00:01:36,000
+Este não atualiza o primeiro
+
+26
+00:01:36,000 --> 00:01:40,000
+controlar nem o segundo
+
+27
+00:01:40,000 --> 00:01:43,000
+Basicamente, o que acontece é que você sobrescreveu esta
+
+28
+00:01:43,000 --> 00:01:47,000
+propriedade message nos novos escopos do primeiro controlador e
+
+29
+00:01:47,000 --> 00:01:50,000
+segundo controlador, então não temos comunicações entre
+
+30
+00:01:50,000 --> 00:01:51,000
+cada um.
+
+31
+00:01:51,000 --> 00:01:54,000
+Assim destruimos a herança do escopo que
+
+32
+00:01:54,000 --> 00:01:56,000
+existia anteriormente.
+
+33
+00:01:56,000 --> 00:02:01,000
+Se você quiser manter isto intacto, e isto também pode vir
+
+34
+00:02:01,000 --> 00:02:04,000
+em jogo quando injetamos propriedades e serviços e
+
+35
+00:02:04,000 --> 00:02:07,000
+coisas que você queira ligar também, se você quiser manter isso
+
+36
+00:02:07,000 --> 00:02:09,000
+intacto, sempre assegure-se de criar
+
+37
+00:02:09,000 --> 00:02:12,000
+um modelo como este.
+
+38
+00:02:12,000 --> 00:02:20,000
+Com este data.message, isto é nosso modelo que vai ligar
+
+39
+00:02:20,000 --> 00:02:23,000
+tudo.
+
+40
+00:02:23,000 --> 00:02:27,000
+Então este modelo de dados não vai ser sobrescrito, somente
+
+41
+00:02:27,000 --> 00:02:30,000
+esta "mensage" no modelo será sobrescrita.
+
+42
+00:02:30,000 --> 00:02:34,000
+Você tem que lembrar-se deste escopo aqui,
+
+43
+00:02:34,000 --> 00:02:36,000
+que não é um modelo.
+
+44
+00:02:36,000 --> 00:02:39,000
+É somente um tipo de referência do que está
+
+45
+00:02:39,000 --> 00:02:41,000
+acontencendo dentro disto.
+
+46
+00:02:41,000 --> 00:02:45,000
+Então nunca pense nisto como um modelo para
+
+47
+00:02:45,000 --> 00:02:46,000
+colocar propriedades nele.
+
+48
+00:02:46,000 --> 00:02:49,000
+Pense nisto como um modelo para atribuir o--
+
+49
+00:02:49,000 --> 00:02:53,000
+desculpe, pense nisto como um escopo para atribuir modelos e ter
+
+50
+00:02:53,000 --> 00:02:56,000
+propriedades nestes modelos mudam, e o escopo pode
+
+51
+00:02:56,000 --> 00:02:58,000
+verificar por mudanças e coisas desta natureza.
+
+52
+00:02:58,000 --> 00:03:00,000
+Por isso o ponto é importante.
+

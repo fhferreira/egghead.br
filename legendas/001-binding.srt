@@ -1,0 +1,200 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+John Lindiquist: Vamos falar sobre binding no AngularJS
+
+3
+00:00:03,000 --> 00:00:07,000
+Vamos apenas configurar uma div com o atributo ng-app
+
+4
+00:00:07,000 --> 00:00:11,000
+Basicamente, este atributo diz que este elemento e tudo
+
+5
+00:00:11,000 --> 00:00:15,000
+dentro dele pertence ao aplicativo
+
+6
+00:00:15,000 --> 00:00:16,000
+Nós vamos aprofundar nisto depois
+
+7
+00:00:16,000 --> 00:00:20,000
+Mas por enquanto, binding se parece com algo assim
+
+8
+00:00:20,000 --> 00:00:23,000
+Então nós vamos ter uma mensagem de dados dentro dessas tags.
+
+9
+00:00:23,000 --> 00:00:26,000
+Nós não temos nada para ligar a isso ainda
+
+10
+00:00:26,000 --> 00:00:29,000
+Mas quero te mostrar que você pode realmente avaliar qualquer 
+
+11
+00:00:29,000 --> 00:00:31,000
+tipo de expressão aqui.
+
+12
+00:00:31,000 --> 00:00:34,000
+Vamos fazer isso um pouco maior
+
+13
+00:00:34,000 --> 00:00:38,000
+Então 2 + 2, se eu atualizo, isto vai aparecer 4
+
+14
+00:00:38,000 --> 00:00:42,000
+3 + 2, atualizando, vai aparecer 5
+
+15
+00:00:42,000 --> 00:00:52,000
+e você pode fazer coisas como John + Lindiquist
+
+16
+00:00:52,000 --> 00:00:54,000
+e de novo, qualquert tipo de...
+
+17
+00:00:54,000 --> 00:00:56,000
+não qualquer tipo de expressão, mas muitas expressôes podem
+
+18
+00:00:56,000 --> 00:00:59,000
+ser usadas aqui
+
+19
+00:00:59,000 --> 00:01:01,000
+Agora temos várias coisas que você não pode fazer aqui
+
+20
+00:01:01,000 --> 00:01:05,000
+Você realmente deve manter esta lógica mínima, porque
+
+21
+00:01:05,000 --> 00:01:08,000
+esta é sua view em apresentação. 
+
+22
+00:01:08,000 --> 00:01:12,000
+mas temos realmente várias coisas que você pode fazer aqui
+
+23
+00:01:12,000 --> 00:01:14,000
+Basicamente, onde isso fica realmente útil é onde você
+
+24
+00:01:14,000 --> 00:01:18,000
+cria um input ou qualquer meio do usuário interagir com o
+
+25
+00:01:18,000 --> 00:01:20,000
+site ou aplicativo.
+
+26
+00:01:20,000 --> 00:01:23,000
+E você dá isso como modelo, digo, mensagem de dados.
+
+27
+00:01:23,000 --> 00:01:27,000
+E então, aqui vamos dizer, a mensagem de dados.
+
+28
+00:01:27,000 --> 00:01:30,000
+Então quando eu atualizdo aqui, por causa de ter um modelo vinculado
+
+29
+00:01:30,000 --> 00:01:35,000
+a isso, eu posso começar a escrever e magicamente
+
+30
+00:01:35,000 --> 00:01:40,000
+atualizar a cada pressionamento de tecla.
+
+31
+00:01:40,000 --> 00:01:45,000
+Então é assim que seus dados estão sendo vinculados e sendo
+
+32
+00:01:45,000 --> 00:01:48,000
+apresentados para qualquer mudança do modelo
+
+33
+00:01:48,000 --> 00:01:52,000
+Agora isto pode fazer coisas como--
+
+34
+00:01:52,000 --> 00:01:57,000
+se nós adicionarmos "world", para adequado hello world.
+
+35
+00:01:57,000 --> 00:02:01,000
+Nós podemos digitar hello, e isso vai mostrar hello world
+
+36
+00:02:01,000 --> 00:02:03,000
+Agora onde isto fica um pouco louco e
+
+37
+00:02:03,000 --> 00:02:05,000
+legal, você pode efetivamente--
+
+38
+00:02:05,000 --> 00:02:11,000
+se eu escrever uma div e a der uma classe como essa data message,
+
+39
+00:02:11,000 --> 00:02:12,000
+que é uma espécie de um nome estranho para ele, mas nós vamos
+
+40
+00:02:12,000 --> 00:02:19,000
+deixar isso por agora e dizer, envolvendo com um componente do Foundation.
+
+41
+00:02:19,000 --> 00:02:21,000
+Estes componentes Foundation estão dentro
+
+42
+00:02:21,000 --> 00:02:24,000
+da biblioteca Foundation.
+
+43
+00:02:24,000 --> 00:02:31,000
+Então temos um painel, uma caixa de alerta, uma etiqueta
+
+44
+00:02:31,000 --> 00:02:35,000
+Você pode ver que é atualizado automaticamente
+
+45
+00:02:35,000 --> 00:02:39,000
+dentro dos atributos, com valor dentro.
+
+46
+00:02:39,000 --> 00:02:41,000
+Então você realmente pode manipular muito do DOM
+
+47
+00:02:41,000 --> 00:02:43,000
+usando o "data binding" - ligação de dados.
+
+48
+00:02:43,000 --> 00:02:45,000
+Não é apenas uma apresentação de texto simples ou qualquer coisa, mas
+
+49
+00:02:45,000 --> 00:02:48,000
+há várias coisas complexas que você pode fazer.
+
+50
+00:02:48,000 --> 00:02:51,000
+Então, isto é data binding em poucas palavras, e prossigamos...
+

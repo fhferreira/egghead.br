@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+Now that we've gone through binding a bit, let's talk
+
+3
+00:00:03,000 --> 00:00:05,000
+about controllers.
+
+4
+00:00:05,000 --> 00:00:09,000
+So let's take this data from this ng-model and kind of
+
+5
+00:00:09,000 --> 00:00:12,000
+extract it out into a controller which will provide
+
+6
+00:00:12,000 --> 00:00:14,000
+the data for us.
+
+7
+00:00:14,000 --> 00:00:20,000
+So we'll take this entire code block here and we'll wrap it
+
+8
+00:00:20,000 --> 00:00:27,000
+in a div, and to ng-controller, and we'll just
+
+9
+00:00:27,000 --> 00:00:31,000
+call this our FirstCtrl.
+
+10
+00:00:31,000 --> 00:00:36,000
+Now you can see that everything inside this div is
+
+11
+00:00:36,000 --> 00:00:39,000
+going to have the scope of that controller.
+
+12
+00:00:39,000 --> 00:00:43,000
+So let's go ahead and delete that ng-model data.message, so
+
+13
+00:00:43,000 --> 00:00:51,000
+we have nothing providing that data message to our bound
+
+14
+00:00:51,000 --> 00:00:52,000
+expression.
+
+15
+00:00:52,000 --> 00:00:57,000
+So if we set up our script, we'll just say main.js is a
+
+16
+00:00:57,000 --> 00:00:59,000
+file and create it.
+
+17
+00:00:59,000 --> 00:01:02,000
+And let's define something called first controller.
+
+18
+00:01:02,000 --> 00:01:04,000
+FirstCtrl.
+
+19
+00:01:04,000 --> 00:01:09,000
+And from here, what happens is you pass in the $scope, and
+
+20
+00:01:09,000 --> 00:01:13,000
+that $scope is again related to these elements and
+
+21
+00:01:13,000 --> 00:01:15,000
+everything contained inside of there.
+
+22
+00:01:15,000 --> 00:01:18,000
+It's kind of the scope of what can go on in this controller.
+
+23
+00:01:18,000 --> 00:01:22,000
+And inside that $scope we'll create a model, which we've
+
+24
+00:01:22,000 --> 00:01:24,000
+just called data so far.
+
+25
+00:01:24,000 --> 00:01:28,000
+And we'll say the message is hello.
+
+26
+00:01:28,000 --> 00:01:34,000
+So if we refresh, we can see we're now using the same
+
+27
+00:01:34,000 --> 00:01:38,000
+data.message, but now we're getting the hello from the
+
+28
+00:01:38,000 --> 00:01:40,000
+controller in here.
+
+29
+00:01:40,000 --> 00:01:45,000
+So if we did the panel again and we refresh from there, you
+
+30
+00:01:45,000 --> 00:01:46,000
+can see we create the panel.
+
+31
+00:01:46,000 --> 00:01:49,000
+But now the data's being provided from
+
+32
+00:01:49,000 --> 00:01:51,000
+a JavaScript file.
+
+33
+00:01:51,000 --> 00:01:53,000
+So you can write to your behaviors and everything
+
+34
+00:01:53,000 --> 00:02:00,000
+inside of here instead of just trying to relate everything to
+
+35
+00:02:00,000 --> 00:02:01,000
+some sort of user input.
+
+36
+00:02:01,000 --> 00:02:05,000
+So in your controller you can use the service calls or other
+
+37
+00:02:05,000 --> 00:02:08,000
+things to get data to push into your view.
+
+38
+00:02:08,000 --> 00:02:12,000
+So that's the basics of a controller and
+

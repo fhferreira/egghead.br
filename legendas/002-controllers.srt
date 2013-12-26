@@ -1,0 +1,152 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+Agora que nós sabemos um pouco sobre binding, vamos falar
+
+3
+00:00:03,000 --> 00:00:05,000
+sobre controladores.
+
+4
+00:00:05,000 --> 00:00:09,000
+Então vamos pegar esses dados a partir deste ng-model e 
+
+5
+00:00:09,000 --> 00:00:12,000
+extraí-lo daqui e usar um controlador que vai fornecer
+
+6
+00:00:12,000 --> 00:00:14,000
+os dados para nós.
+
+7
+00:00:14,000 --> 00:00:20,000
+Então vamos pegar este bloco inteiro de código aqui e envolvê-lo
+
+8
+00:00:20,000 --> 00:00:27,000
+numa div, e no ng-controller, e vamos somente
+
+9
+00:00:27,000 --> 00:00:31,000
+chamá-lo de FirstCtrl.
+
+10
+00:00:31,000 --> 00:00:36,000
+Agora você pode ver que tudo dentro desta div vai
+
+11
+00:00:36,000 --> 00:00:39,000
+ser o escopo deste controlador.
+
+12
+00:00:39,000 --> 00:00:43,000
+Então vamos em frente e excluir o ng-model data.message, então
+
+13
+00:00:43,000 --> 00:00:51,000
+não temos nada fornecendo o dado 'message' para nossa expressão
+
+14
+00:00:51,000 --> 00:00:52,000
+de ligação.
+
+15
+00:00:52,000 --> 00:00:57,000
+Então quando configurarmos nosso script, nós vamos indicar main.js como
+
+16
+00:00:57,000 --> 00:00:59,000
+um arquivo e criá-lo.
+
+17
+00:00:59,000 --> 00:01:02,000
+E vamos definir algo chamado first controller
+
+18
+00:01:02,000 --> 00:01:04,000
+FirstCtrl
+
+19
+00:01:04,000 --> 00:01:09,000
+E por aqui, o que acontece é que você passa no $scope, e
+
+20
+00:01:09,000 --> 00:01:13,000
+o $scope é novamente relacionado com estes elementos e
+
+21
+00:01:13,000 --> 00:01:15,000
+tudo contido dentro daqui.
+
+22
+00:01:15,000 --> 00:01:18,000
+É um tipo de escopo de o controlador pode chegar.
+
+23
+00:01:18,000 --> 00:01:22,000
+E dentro do $scope vamos criar um modelo, que nós
+
+24
+00:01:22,000 --> 00:01:24,000
+vamos chamar de data.
+
+25
+00:01:24,000 --> 00:01:28,000
+E vamos dizer a messagem hello
+
+26
+00:01:28,000 --> 00:01:34,000
+Então se atualizarmos, nós podemos ver que agora usando o mesmo
+
+27
+00:01:34,000 --> 00:01:38,000
+data.message, mas agora vamos dizer hello a partir do
+
+28
+00:01:38,000 --> 00:01:40,000
+controlador aqui.
+
+29
+00:01:40,000 --> 00:01:45,000
+Então se fizermos o panel novamente e atualizarmos, você
+
+30
+00:01:45,000 --> 00:01:46,000
+verá que criamos o panel.
+
+31
+00:01:46,000 --> 00:01:49,000
+Mas agora os dados são forneceidos de
+
+32
+00:01:49,000 --> 00:01:51,000
+um arquivo JavaScript
+
+33
+00:01:51,000 --> 00:01:53,000
+Então você pode escrever seus comportamenteos e tudo
+
+34
+00:01:53,000 --> 00:02:00,000
+dentro daqui ao invés de somente tentar relacionar tudo através
+
+35
+00:02:00,000 --> 00:02:01,000
+de um tipo de input de usuário.
+
+36
+00:02:01,000 --> 00:02:05,000
+Em seu controlador você pode usar as chamadas de serviços ou outras
+
+37
+00:02:05,000 --> 00:02:08,000
+coisas para pegar dados e jogá-los na sua view
+
+38
+00:02:08,000 --> 00:02:12,000
+Então isto é o básico sobre os Controladores.
+
