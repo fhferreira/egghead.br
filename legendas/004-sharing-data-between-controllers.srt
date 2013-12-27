@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+John Lindquist: agora vamos falar sobre trocas de dados entre
+
+3
+00:00:03,000 --> 00:00:04,000
+controladores.
+
+4
+00:00:04,000 --> 00:00:09,000
+Vamos adicionar um tanto de espaços brancos aqui para mostrar
+
+5
+00:00:09,000 --> 00:00:11,000
+que estes são controladores completamente separados.
+
+6
+00:00:11,000 --> 00:00:14,000
+Agora, está funcionando.
+
+7
+00:00:14,000 --> 00:00:17,000
+Você pode ver que todos estão amarrados e sendo atualizados
+
+8
+00:00:17,000 --> 00:00:18,000
+uns aos outros.
+
+9
+00:00:18,000 --> 00:00:21,000
+Mas a razão que isso está funcioando agora é porque você tem
+
+10
+00:00:21,000 --> 00:00:24,000
+um modelo data.message definido aqui
+
+11
+00:00:24,000 --> 00:00:29,000
+se nós deletarmos ele, e rodar novamente isto--
+
+12
+00:00:29,000 --> 00:00:34,000
+o primeiro não vai ligar com o segundo. 
+
+13
+00:00:34,000 --> 00:00:36,000
+Você vê, eles estão separados agora porque este data.message está
+
+14
+00:00:36,000 --> 00:00:39,000
+dentro do escopo deste primeiro controlador.
+
+15
+00:00:39,000 --> 00:00:42,000
+E este data.message está dentro do escopo do segundo
+
+16
+00:00:42,000 --> 00:00:42,000
+controlador.
+
+17
+00:00:42,000 --> 00:00:46,000
+e não temos parentesco de escopo entre eles para vincular estes
+
+18
+00:00:46,000 --> 00:00:47,000
+modelos de dados 
+
+19
+00:00:47,000 --> 00:00:51,000
+Então o que vamos fazer para compartilhar os dados, ao invés de
+
+20
+00:00:51,000 --> 00:00:56,000
+criar um escopo parente e herdar dele, é
+
+21
+00:00:56,000 --> 00:00:58,000
+criar algo chamado Service (serviço).
+
+22
+00:00:58,000 --> 00:01:01,000
+O primeiro passo que você precisa é, realmente temos que
+
+23
+00:01:01,000 --> 00:01:02,000
+definir nossa primeiro app.
+
+24
+00:01:02,000 --> 00:01:07,000
+Isso vai ser um módulo Angular, e vamos chamar isto de
+
+25
+00:01:07,000 --> 00:01:10,000
+myApp, e não irá ter dependências.
+
+26
+00:01:10,000 --> 00:01:12,000
+Este é apenas um tipo de sintaxe que você usa 
+
+27
+00:01:12,000 --> 00:01:15,000
+Nós vamos falar mais sobre isso depois.
+
+28
+00:01:15,000 --> 00:01:21,000
+Basicamente, você que isso vai ser o myApp, e que este
+
+29
+00:01:21,000 --> 00:01:28,000
+cara linka com este nome aqui
+
+30
+00:01:28,000 --> 00:01:31,000
+Então certifique-se que eles sejam iguais, e estará tudo certo.
+
+31
+00:01:31,000 --> 00:01:34,000
+Aqui, uma vez que já temos myApp, podemos criar um factory
+
+32
+00:01:34,000 --> 00:01:36,000
+para criar nosso service.
+
+33
+00:01:36,000 --> 00:01:40,000
+Vamos apenas chamar nosso service de Data
+
+34
+00:01:40,000 --> 00:01:42,000
+Capitalizar a primeira letra é um tipo de convenção
+
+35
+00:01:42,000 --> 00:01:44,000
+você vai ver.
+
+36
+00:01:44,000 --> 00:01:47,000
+e depois vamos criar uma função, que vai retornar um
+
+37
+00:01:47,000 --> 00:01:51,000
+objeto com a mensagem "I'm data from a service"
+
+38
+00:01:51,000 --> 00:01:54,000
+
+
+39
+00:01:54,000 --> 00:01:58,000
+Agora, podemos injetar este dado.
+
+40
+00:01:58,000 --> 00:02:04,000
+Novamente, vamos usar esta string para injetar dentro daqui.
+
+41
+00:02:04,000 --> 00:02:08,000
+Nós podemos injetar o dado dentro do primeiro controlador e dizer,
+
+42
+00:02:08,000 --> 00:02:10,000
+escopo do dado é data.
+
+43
+00:02:10,000 --> 00:02:12,000
+Atualize.
+
+44
+00:02:12,000 --> 00:02:16,000
+Você pode ver que agora temos nosso dado dentro deste campo.
+
+45
+00:02:16,000 --> 00:02:20,000
+E ele é associável.
+
+46
+00:02:20,000 --> 00:02:23,000
+Tudo que devemos fazer para compartilhar isso com o segundo controlador
+
+47
+00:02:23,000 --> 00:02:25,000
+é fazer exatamente a mesma coisa.
+
+48
+00:02:25,000 --> 00:02:30,000
+Use o escopo data, use data.
+
+49
+00:02:30,000 --> 00:02:31,000
+Atualize.
+
+50
+00:02:31,000 --> 00:02:33,000
+e você pode ver que ambos pegam o dado a partir do 
+
+51
+00:02:33,000 --> 00:02:39,000
+serviço, e ambos estão ligados.
+
+52
+00:02:39,000 --> 00:02:42,000
+Assim é como você compartilha dados entre controladores.
+
+53
+00:02:42,000 --> 00:02:46,000
+Basicamente, você cria um serviço usando este factory.
+
+54
+00:02:46,000 --> 00:02:49,000
+Você retorna qualquer tipo de objeto que você queira usar--
+
+55
+00:02:49,000 --> 00:02:51,000
+vamos falar sobre construção de APIs de serviços e esse 
+
+56
+00:02:51,000 --> 00:02:54,000
+tipo de coisas mais tarde.
+
+57
+00:02:54,000 --> 00:02:56,000
+Mas uma vez definido um serciço neste objeto, você
+
+58
+00:02:56,000 --> 00:03:01,000
+pode injetá-lo usando este tipo de dado
+
+59
+00:03:01,000 --> 00:03:04,000
+e isto será lido por qualquer de seus controladores,
+
+60
+00:03:04,000 --> 00:03:07,000
+e qualquer escopo para assistir por mudanças.
+
+61
+00:03:07,000 --> 00:03:10,000
+Você pode ver que eles estão completamente separados
+
+62
+00:03:10,000 --> 00:03:14,000
+Não há nenhum escopo raiz ou herança acontecendo aqui.
+
+63
+00:03:14,000 --> 00:03:18,000
+Você simplesmente está injetando o serviço e este objeto dentro
+
+64
+00:03:18,000 --> 00:03:19,000
+de cada controlador.
+

@@ -1,0 +1,256 @@
+1
+00:00:00,000 --> 00:00:01,000
+
+
+2
+00:00:01,000 --> 00:00:03,000
+JOHN LINDQUIST: Now let's talk about sharing data between
+
+3
+00:00:03,000 --> 00:00:04,000
+controllers.
+
+4
+00:00:04,000 --> 00:00:09,000
+So let's add a bunch of white space here just to show that
+
+5
+00:00:09,000 --> 00:00:11,000
+these are completely separate controllers.
+
+6
+00:00:11,000 --> 00:00:14,000
+Now, this is working.
+
+7
+00:00:14,000 --> 00:00:17,000
+You can see that all of these are being bound and updating
+
+8
+00:00:17,000 --> 00:00:18,000
+to each other.
+
+9
+00:00:18,000 --> 00:00:21,000
+But the reason that's working right now is because you have
+
+10
+00:00:21,000 --> 00:00:24,000
+a data message model defined there.
+
+11
+00:00:24,000 --> 00:00:29,000
+If we delete that, and we run this again--
+
+12
+00:00:29,000 --> 00:00:34,000
+first will not bind to second.
+
+13
+00:00:34,000 --> 00:00:36,000
+You see, they're separated now because this data message is
+
+14
+00:00:36,000 --> 00:00:39,000
+inside the scope of this first controller.
+
+15
+00:00:39,000 --> 00:00:42,000
+And this data message is inside the scope of the second
+
+16
+00:00:42,000 --> 00:00:42,000
+controller.
+
+17
+00:00:42,000 --> 00:00:46,000
+And there was no parent scope for them to grab that data
+
+18
+00:00:46,000 --> 00:00:47,000
+model off of.
+
+19
+00:00:47,000 --> 00:00:51,000
+So what we're going to do here to share the data, instead of
+
+20
+00:00:51,000 --> 00:00:56,000
+creating a parent scope and inheriting from it, is
+
+21
+00:00:56,000 --> 00:00:58,000
+creating something called a Service.
+
+22
+00:00:58,000 --> 00:01:01,000
+So the first step you need is, we actually need to
+
+23
+00:01:01,000 --> 00:01:02,000
+define our first app.
+
+24
+00:01:02,000 --> 00:01:07,000
+So it will be an angular module, and we'll just call it
+
+25
+00:01:07,000 --> 00:01:10,000
+myApp, and it will have no dependencies.
+
+26
+00:01:10,000 --> 00:01:12,000
+That's just kind of the syntax you use.
+
+27
+00:01:12,000 --> 00:01:15,000
+We'll talk more about this stuff later.
+
+28
+00:01:15,000 --> 00:01:21,000
+But basically, you say this will be myApp, and that this
+
+29
+00:01:21,000 --> 00:01:28,000
+guy links up to this name here.
+
+30
+00:01:28,000 --> 00:01:31,000
+So just make sure those match, and you're fine.
+
+31
+00:01:31,000 --> 00:01:34,000
+From there, once we have myApp, we can create a factory
+
+32
+00:01:34,000 --> 00:01:36,000
+to create our service.
+
+33
+00:01:36,000 --> 00:01:40,000
+We'll just call our service Data.
+
+34
+00:01:40,000 --> 00:01:42,000
+Capitalizing the first letter is kind of a convention,
+
+35
+00:01:42,000 --> 00:01:44,000
+you'll see.
+
+36
+00:01:44,000 --> 00:01:47,000
+And then I'll create a function, which will return an
+
+37
+00:01:47,000 --> 00:01:51,000
+object with a message called, I'm data from a service.
+
+38
+00:01:51,000 --> 00:01:54,000
+
+
+39
+00:01:54,000 --> 00:01:58,000
+Now, we can inject this data.
+
+40
+00:01:58,000 --> 00:02:04,000
+Again, we'll be using this string to inject into here.
+
+41
+00:02:04,000 --> 00:02:08,000
+We can inject that data into the first controller and say,
+
+42
+00:02:08,000 --> 00:02:10,000
+scope data is data.
+
+43
+00:02:10,000 --> 00:02:12,000
+Hit Refresh.
+
+44
+00:02:12,000 --> 00:02:16,000
+You can see that we now get our data into this field.
+
+45
+00:02:16,000 --> 00:02:20,000
+And this is bindable.
+
+46
+00:02:20,000 --> 00:02:23,000
+And all we have to do to share it with the second controller
+
+47
+00:02:23,000 --> 00:02:25,000
+is do the exact same thing.
+
+48
+00:02:25,000 --> 00:02:30,000
+Use scope data, use data.
+
+49
+00:02:30,000 --> 00:02:31,000
+Hit Refresh.
+
+50
+00:02:31,000 --> 00:02:33,000
+And you can see that both of these are getting data from a
+
+51
+00:02:33,000 --> 00:02:39,000
+service, and they're both bindable.
+
+52
+00:02:39,000 --> 00:02:42,000
+So that's how you share data between controllers.
+
+53
+00:02:42,000 --> 00:02:46,000
+Basically, you create a service using this factory.
+
+54
+00:02:46,000 --> 00:02:49,000
+You return whatever sort of object you want to use with--
+
+55
+00:02:49,000 --> 00:02:51,000
+we'll talk about building out APIs for services and that
+
+56
+00:02:51,000 --> 00:02:54,000
+sort of stuff later on.
+
+57
+00:02:54,000 --> 00:02:56,000
+But once you've defined a service in this object, you
+
+58
+00:02:56,000 --> 00:03:01,000
+can just inject it by using this data lookup.
+
+59
+00:03:01,000 --> 00:03:04,000
+And it will be ready for any of your controllers to use,
+
+60
+00:03:04,000 --> 00:03:07,000
+and any of the scopes to watch for changes on.
+
+61
+00:03:07,000 --> 00:03:10,000
+You can see that these are completely separate.
+
+62
+00:03:10,000 --> 00:03:14,000
+There's no root scope or scope inheritance going on there.
+
+63
+00:03:14,000 --> 00:03:18,000
+You're simply injecting this service and this object into
+
+64
+00:03:18,000 --> 00:03:19,000
+each controller.
+
