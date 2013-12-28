@@ -11,6 +11,7 @@
 * 02 - Controllers
 * 03 - Dot
 * 04 - Sharing Data Between Controllers
+* 05 - Defining a method on the scope
 
 
 
