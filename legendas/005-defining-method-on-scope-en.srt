@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:03,000
+Defining a method on your controller or on the scope in
+
+2
+00:00:03,000 --> 00:00:06,000
+your controller is actually pretty straightforward.
+
+3
+00:00:06,000 --> 00:00:08,000
+We'll just define a method called reversedMessage.
+
+4
+00:00:08,000 --> 00:00:09,000
+
+
+5
+00:00:09,000 --> 00:00:14,000
+And this will be a function that returns a
+
+6
+00:00:14,000 --> 00:00:17,000
+scope, a data message.
+
+7
+00:00:17,000 --> 00:00:23,000
+And we'll split it up and reverse it, and then join it
+
+8
+00:00:23,000 --> 00:00:25,000
+back together.
+
+9
+00:00:25,000 --> 00:00:29,000
+And then, all we'll do in here is, instead of saying data
+
+10
+00:00:29,000 --> 00:00:32,000
+message, we'll invoke our method and say
+
+11
+00:00:32,000 --> 00:00:34,000
+reversedMessage.
+
+12
+00:00:34,000 --> 00:00:35,000
+
+
+13
+00:00:35,000 --> 00:00:37,000
+So we should be set up.
+
+14
+00:00:37,000 --> 00:00:44,000
+So this is reversed.
+
+15
+00:00:44,000 --> 00:00:50,000
+And you can see it says "this is reversed." So that's really
+
+16
+00:00:50,000 --> 00:00:56,000
+all you need to do is just define a method on your scope,
+
+17
+00:00:56,000 --> 00:00:58,000
+give it a function that does something.
+
+18
+00:00:58,000 --> 00:01:02,000
+And actually, something I want to show you here that I see a
+
+19
+00:01:02,000 --> 00:01:06,000
+lot of people do is as much as possible, you don't want to
+
+20
+00:01:06,000 --> 00:01:10,000
+reference the scope inside of a function, because we can
+
+21
+00:01:10,000 --> 00:01:15,000
+really extract this out and pass in the message into our
+
+22
+00:01:15,000 --> 00:01:16,000
+reversed message.
+
+23
+00:01:16,000 --> 00:01:19,000
+And we'll say we'll pass in the data message.
+
+24
+00:01:19,000 --> 00:01:25,000
+And then, this can just be message because we can pass in
+
+25
+00:01:25,000 --> 00:01:26,000
+our message here.
+
+26
+00:01:26,000 --> 00:01:30,000
+And that removes the dependency of the scope inside
+
+27
+00:01:30,000 --> 00:01:30,000
+of our function.
+
+28
+00:01:30,000 --> 00:01:33,000
+It makes it easier to test and all that sort of stuff.
+
+29
+00:01:33,000 --> 00:01:41,000
+So you can see it works just the same as it always did.
+
+30
+00:01:41,000 --> 00:01:45,000
+But now, instead of having this scope dependency inside
+
+31
+00:01:45,000 --> 00:01:49,000
+of your method here, you're just passing in the value into
+
+32
+00:01:49,000 --> 00:01:50,000
+your method.
+
+33
+00:01:50,000 --> 00:01:54,000
+So much cleaner, much better way of approaching that.
+
+34
+00:01:54,000 --> 00:01:56,000
+And again, just message, message, and it
+
+35
+00:01:56,000 --> 00:01:58,000
+returns that value.
+
+36
+00:01:58,000 --> 00:02:00,000
+And it's just going to update that and do that check any
+
+37
+00:02:00,000 --> 00:02:01,000
+time it sees the scope change.
+
+38
+00:02:01,000 --> 00:02:06,000
+So that should be often enough for things like binding.
+
+39
+00:02:06,000 --> 00:02:11,000
+If one of the scope models changes, it'll invoke this
+
+40
+00:02:11,000 --> 00:02:13,000
+reverse message function as well.
+
+41
+00:02:13,000 --> 00:02:14,000
+So there you go.
+

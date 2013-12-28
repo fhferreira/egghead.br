@@ -1,0 +1,164 @@
+1
+00:00:00,000 --> 00:00:03,000
+Definir um método no seu controlador ou no seu escopo
+
+2
+00:00:03,000 --> 00:00:06,000
+dentro do controlador é realmente muito fácil.
+
+3
+00:00:06,000 --> 00:00:08,000
+Nós somente definimos um método chamado reverseMessage
+
+4
+00:00:08,000 --> 00:00:09,000
+
+
+5
+00:00:09,000 --> 00:00:14,000
+e isto será a função que retorna um
+
+6
+00:00:14,000 --> 00:00:17,000
+escopo, um 'data message'
+
+7
+00:00:17,000 --> 00:00:23,000
+vamos separar e reverter isto, e então juntar
+
+8
+00:00:23,000 --> 00:00:25,000
+de volta
+
+9
+00:00:25,000 --> 00:00:29,000
+e então, tudo que vamos fazer aqui é, ao invés de declarar data
+
+10
+00:00:29,000 --> 00:00:32,000
+message, nós vamos invocar nosso método e dizer
+
+11
+00:00:32,000 --> 00:00:34,000
+reversedMessage
+
+12
+00:00:34,000 --> 00:00:35,000
+
+
+13
+00:00:35,000 --> 00:00:37,000
+Isso será a configuração
+
+14
+00:00:37,000 --> 00:00:44,000
+Aqui está o reverso
+
+15
+00:00:44,000 --> 00:00:50,000
+Você pode ver isto dizendo "this is reversed". O que realmente
+
+16
+00:00:50,000 --> 00:00:56,000
+você precisa fazer é definir um método no seu escopo,
+
+17
+00:00:56,000 --> 00:00:58,000
+e dar uma função que faça algo.
+
+18
+00:00:58,000 --> 00:01:02,000
+E efetivamente, algo que eu quero mostrar a você aqui que eu vejo um
+
+19
+00:01:02,000 --> 00:01:06,000
+monte de pessoas fazendo, você não quer
+
+20
+00:01:06,000 --> 00:01:10,000
+referenciar o escopo dentro de uma função, porque nós podemos
+
+21
+00:01:10,000 --> 00:01:15,000
+realmente extrair isso e passar a mensagem dentro da nossa
+
+22
+00:01:15,000 --> 00:01:16,000
+reversedMessage
+
+23
+00:01:16,000 --> 00:01:19,000
+e vamos dizer que iremos passar dentro da data.message
+
+24
+00:01:19,000 --> 00:01:25,000
+e então, isto pode somente ser message porque nós podemos passar
+
+25
+00:01:25,000 --> 00:01:26,000
+a mensagem aqui
+
+26
+00:01:26,000 --> 00:01:30,000
+removendo a dependência do escopo dentro
+
+27
+00:01:30,000 --> 00:01:30,000
+da nossa função.
+
+28
+00:01:30,000 --> 00:01:33,000
+Isto se torna fácil de testar e todo esse tipo de coisa.
+
+29
+00:01:33,000 --> 00:01:41,000
+Você pode ver isto funcionando da mesma maneira que antes,
+
+30
+00:01:41,000 --> 00:01:45,000
+mas agora, ao inves de ter esta dependência de escopo dentro
+
+31
+00:01:45,000 --> 00:01:49,000
+do nosso método aqui, você somente passa o valor dentro
+
+32
+00:01:49,000 --> 00:01:50,000
+do nosso método.
+
+33
+00:01:50,000 --> 00:01:54,000
+Muito mais limpo, melhorando muito a abordagem.
+
+34
+00:01:54,000 --> 00:01:56,000
+E novamente, somente a mensagem, e isso
+
+35
+00:01:56,000 --> 00:01:58,000
+retorna o valor.
+
+36
+00:01:58,000 --> 00:02:00,000
+E vamos atualizar e fazer a checagem qualquer
+
+37
+00:02:00,000 --> 00:02:01,000
+hora e veremos o escopo mudando
+
+38
+00:02:01,000 --> 00:02:06,000
+Isso deve ser o suficiente para coisas como binding.
+
+39
+00:02:06,000 --> 00:02:11,000
+Se um de seus modelos de escopo mudar, vai invocar a
+
+40
+00:02:11,000 --> 00:02:13,000
+função reverseMessage.
+
+41
+00:02:13,000 --> 00:02:14,000
+Então la vai.
+
