@@ -9,11 +9,11 @@ Estarão listados abaixo, o link para vídeo original e o link referente as expl
 
 ### Relação de Vídeos
 
-* [01 - Binding]() | [resumo]()
-* [02 - Controllers]() | [resumo]()
-* [03 - Dot]() | [resumo]()
-* [04 - Sharing Data Between Controllers]() | [resumo]()
-* [05 - Defining a method on the scope]() | [resumo]()
+* [01 - Binding]()                          - [resumo]()
+* [02 - Controllers]()                      - [resumo]()
+* [03 - Dot]()                              - [resumo]()
+* [04 - Sharing Data Between Controllers]() - [resumo]()
+* [05 - Defining a method on the scope]()   - [resumo]()
 
 
 
