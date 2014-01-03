@@ -9,11 +9,11 @@ Estarão listados abaixo, o link para vídeo original e o link referente as expl
 
 ### Relação de Vídeos
 
-* [01 - Binding]()                          - [resumo]()
-* [02 - Controllers]()                      - [resumo]()
-* [03 - Dot]()                              - [resumo]()
-* [04 - Sharing Data Between Controllers]() - [resumo]()
-* [05 - Defining a method on the scope]()   - [resumo]()
+* [01 - Binding](https://egghead.io/lessons/angularjs-binding) | [resumo](resumo/001-binding.md)
+* [02 - Controllers](https://egghead.io/lessons/angularjs-controllers) | [resumo]()
+* [03 - Dot](https://egghead.io/lessons/angularjs-the-dot) | [resumo]()
+* [04 - Sharing Data Between Controllers](https://egghead.io/lessons/angularjs-sharing-data-between-controllers) | [resumo]()
+* [05 - Defining a method on the scope](https://egghead.io/lessons/angularjs-defining-a-method-on-the-scope) | [resumo]()
 
 
 
