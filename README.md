@@ -1,16 +1,19 @@
 # Egghead.br
-#####Repositório para traduções das legendas e transcrições dos exemplos originalmente postados em [egghead.io](https://egghead.io/)
+##### Repositório para traduções das legendas e transcrições dos exemplos originalmente postados em [egghead.io](https://egghead.io/)
 
 ![Egghead.br](img/egghead.br.png)
 
+## Como Utiizar
 
-### Vídeos traduzidos
+Estarão listados abaixo, o link para vídeo original e o link referente as explicações, traduzidas, dos comentários sobre os vídeos no curso da **Thinkster.io** [neste link.](http://www.thinkster.io/pick/GtaQ0oMGIl/a-better-way-to-learn-angularjs)
 
-* 01 - Binding
-* 02 - Controllers
-* 03 - Dot
-* 04 - Sharing Data Between Controllers
-* 05 - Defining a method on the scope
+### Relação de Vídeos
+
+* [01 - Binding]() | [resumo]()
+* [02 - Controllers]() | [resumo]()
+* [03 - Dot]() | [resumo]()
+* [04 - Sharing Data Between Controllers]() | [resumo]()
+* [05 - Defining a method on the scope]() | [resumo]()
 
 
 
