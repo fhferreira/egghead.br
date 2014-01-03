@@ -1,8 +1,7 @@
 # Egghead.br
 #####Repositório para traduções das legendas e transcrições dos exemplos originalmente postados em [egghead.io](https://egghead.io/)
 
-<img src="https://docs.google.com/drawings/d/1DPckOWk84oU20LejNA9gFe7rp8-XrCjGBVh0mxAaXWg/pub?w=684&amp;h=369">
-
+![Egghead.br](img/egghead.br.png)
 
 
 ### Vídeos traduzidos
